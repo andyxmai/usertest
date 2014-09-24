@@ -1,3 +1,38 @@
-<div class="bg"></div> <div id="" class="jumbotron"> <h1>Get User Testers</h1> <p class="lead"> We find testers for your app </p> <!-- <p class="">
+<div class="bg"></div> <div id="" class="jumbotron"> <h1>Get User Testers</h1> <p class="lead"> Give us your availability we will find testers for you </p> <!-- <p class="">
     $5 + $1/minute each tester
-  </p> --> <p class="lead"> Contact us for price </p> <p><a class="btn btn-lg btn-primary" ng-href="#">Contact Us</a></p> </div> <div class="row marketing"> <h3>How it works: </h3> <br> <h4>1. Prototype your idea</h4> <p> Build out an MVP as quick as possible. It doesn't need to be perfect. </p> <h4>2. Holla at us</h4> <p> Once your prototype is ready, contact us and we will find you testers to try out your app! All testers are tech-savy and give great feedback. </p> <h4>3. Iterate</h4> <p>Gather all feedback from the user testing and improve on your prototype!</p> </div> <div class="row marketing"> <h3>Why is user testing important? </h3> <br> <h4>1. Determine the market need</h4> <p> User testers aren't just testers; they are your target users! Talking to them to see if your idea is something they would use. </p> <h4>2. Improve your user experience</h4> <p> What seems obvious to developers may not be obvious to an ordinary user. User testing helps you build intuitive and awesome apps. </p> <h4>3. Market your app</h4> <p> User testers often become your first users. Take advantage of them! </p></div>
+  </p> --> <!-- <p class="lead">
+    Contact us for price
+  </p> --> <p><a class="btn btn-lg btn-success" ng-href="#" ng-click="open()">Contact Us</a></p> </div> <div class="row marketing"> <h3>How it works: </h3> <br> <h4>1. Prototype your idea</h4> <p> Build out an MVP as quick as possible. It doesn't need to be perfect. </p> <h4>2. Holla at us</h4> <p> Once your prototype is ready, contact us and we will find you testers to try out your app! All testers are tech-savy and give great feedback. </p> <h4>3. Iterate</h4> <p>Gather all feedback from the user testing and improve on your prototype!</p> </div> <div class="row marketing"> <h3>Why is user testing important? </h3> <br> <h4>1. Determine the market need</h4> <p> User testers aren't just testers; they are your target users! Talking to them to see if your idea is something they would use. </p> <h4>2. Improve your user experience</h4> <p> What seems obvious to developers may not be obvious to an ordinary user. User testing helps you build intuitive and awesome apps. </p> <h4>3. Market your app</h4> <p> User testers often become your first users. Take advantage of them! </p> </div> <script type="text/ng-template" id="myModalContent.html"><div class="modal-header">
+    <h3 class="modal-title">Your Info</h3>
+  </div>
+  <div class="modal-body">
+    <form class="form-horizontal" role="form">
+      <div class="form-group">
+        <label for="inputName" class="col-sm-2 control-label">Name</label>
+        <div class="col-sm-10">
+          <input type="text" ng-model="form.name"  class="form-control" id="inputName" placeholder="Name">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputEmail" class="col-sm-2 control-label">Email</label>
+        <div class="col-sm-10">
+          <input type="email" ng-model="form.email"  class="form-control" id="inputEmail" placeholder="Email">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="referral" class="col-sm-2 control-label">Referral</label>
+        <div class="col-sm-10">
+          <select ng-model="form.referral" class="form-control" id="referral">
+            <option value="" selected disabled>How did you hear about us?</option>
+            <option value="ms&e273">MS&E 273 Technology Venture Formation</option>
+            <option value="me377">ME377 Design Thinking</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-default" ng-click="cancel()">Cancel</button>
+    <button class="btn btn-success" ng-click="ok()">Submit</button>
+  </div></script>
