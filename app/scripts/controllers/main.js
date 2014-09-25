@@ -9,14 +9,6 @@
  */
 angular.module('utApp')
   .controller('MainCtrl', function ($scope, $modal, $log) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-
-    $scope.items = ['item1', 'item2', 'item3'];
-
 	  $scope.open = function (size) {
 
 	    var modalInstance = $modal.open({
@@ -38,18 +30,15 @@ angular.module('utApp')
 	  }; 
   });
 
-var ModalInstanceCtrl = function ($scope, $modalInstance, items) {
+var ModalInstanceCtrl = function ($scope, $modalInstance, $http) {
 
-  $scope.items = items;
-  $scope.selected = {
-    item: $scope.items[0]
+  $scope.ok = function(form) {
+    console.log(form);
+    $http.post('/email/', form);
+    $modalInstance.close();
   };
 
-  $scope.ok = function () {
-    $modalInstance.close($scope.selected.item);
-  };
-
-  $scope.cancel = function () {
+  $scope.cancel = function() {
     $modalInstance.dismiss('cancel');
   };
 };
